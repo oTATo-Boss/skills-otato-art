@@ -1,4 +1,4 @@
-export default {
+const legacyRedirect = {
   fetch(request) {
     const destination = new URL(request.url);
     destination.protocol = "https:";
@@ -7,3 +7,5 @@ export default {
     return Response.redirect(destination, 308);
   },
 };
+
+export default legacyRedirect;
