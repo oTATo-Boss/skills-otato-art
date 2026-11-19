@@ -1,6 +1,9 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "otato-skills",
+  "account_id": "5de6d827a228377db32730376e2e9b28",
+  "workers_dev": true,
+  "routes": [{ "pattern": "skills.otato.art", "custom_domain": true }],
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-10-12",
   "compatibility_flags": ["nodejs_compat"],

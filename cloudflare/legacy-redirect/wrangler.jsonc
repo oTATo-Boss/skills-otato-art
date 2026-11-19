@@ -1,0 +1,10 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "otato-skills-legacy-redirect",
+  "account_id": "5de6d827a228377db32730376e2e9b28",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-12",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "skill.otato.art", "custom_domain": true }]
+}

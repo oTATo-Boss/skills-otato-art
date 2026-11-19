@@ -1,5 +1,7 @@
 # oTATo Skills
 
+正式站点 [skills.otato.art](https://skills.otato.art)
+
 以用户提供的 `oTATo_Skills_Command.html` 为依据重建，使用用户其他项目通用的 Next.js、React、TypeScript 与 Tailwind CSS。当前仅做界面和演示交互。
 
 ## 当前范围
@@ -38,14 +40,17 @@ npm run start
 
 ## Cloudflare
 
-提供 OpenNext Cloudflare 配置，沿用用户其他 Next.js 工程的部署工具。构建、预览和正式部署为独立命令，当前不自动上线：
+正式站点由 Cloudflare Worker `otato-skills` 提供服务，备用地址为 [otato-skills.susu177990.workers.dev](https://otato-skills.susu177990.workers.dev)。
+
+旧域名由独立的 [重定向 Worker](cloudflare/legacy-redirect/wrangler.jsonc) 返回 HTTP 308，保留路径和查询参数。需要更新旧域名的跳转时，使用 `npx wrangler deploy --profile personal --config cloudflare/legacy-redirect/wrangler.jsonc`。
 
 ```sh
 npm run build:cloudflare
 npm run preview:cloudflare
+npm run deploy:cloudflare
 ```
 
-正式部署需另行确定 Cloudflare 账号、项目和域名。配置未复制其他工程的账号 ID、API 服务或存储绑定。
+正式站点通过个人 Cloudflare 账号手动部署。
 
 ## 来源与依赖
 
